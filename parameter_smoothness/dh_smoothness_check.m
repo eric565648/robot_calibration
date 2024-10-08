@@ -20,6 +20,10 @@ dRdth = diff(R,th);
 syms dalpha dth;
 
 Rnew = R + dRdalpha*dalpha + dRdth*dth;
+dR = dRdalpha*dalpha + dRdth*dth;
+
+disp('At alpha = 0 (deg)');
+subs(dR,alpha,0)
 
 disp('At alpha = 0 (deg), theta = 0 (deg)');
 subs(Rnew,[alpha,th],[0,0])
